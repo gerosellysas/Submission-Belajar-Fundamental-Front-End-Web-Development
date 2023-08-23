@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: mediumaquamarine;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75em;
+    box-shadow: 0 0.25em 0.25em 0 rgba(0, 0, 0, 0.25);
+}
+
+#logo a {
+    display: flex;
+    text-decoration: none;
+    transition: transform .4s;
+}
+
+#logo img {
+    width: 3em;
+    height: 3em;
+    margin-right: 0.75em;
+    object-fit: fill;
+    object-position: center;
+}
+
+#logo:hover {
+    transform: scale(1.025);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 70em;
+    text-align: center;
+}
+
+nav button {
+    background: linear-gradient(180deg, aquamarine 0%, aquamarine 25%, mediumaquamarine 100%);
+    color: white;
+    width: 10em;
+    font-weight: 700;
+    padding: 0.5em;
+    border: 0 solid aquamarine;
+    border-radius: 5px;
+    box-shadow: 0 1.5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+nav button:hover {
+    background: linear-gradient(180deg, mediumaquamarine 0%, mediumaquamarine 25%, aquamarine 100%);
+}
+
+nav a {
+    color: white;
+    width: 10em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-weight: 700;
+}
+
+nav .disactive {
+    display: none;
+}
+
+body {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    margin-top: 7.5em;
+}
+
+h1 {
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+h2 {
+    color: black;
+    font-size: 1.15em;
+    font-weight: 600;
+    text-align: left;
+    margin: 2.5em auto;
+    padding-left: 1em;
+}
+
+.search_input>input {
+    height: 2.5em;
+    width: 50em;
+    font-size: 0.9em;
+    font-style: normal;
+    margin-right: 1em;
+    padding: 0 1em;
+    border: 0;
+    border-radius: 5px;
+}
+
+.search_input>input::placeholder {
+    font-style: italic;
+}
+
+.search_input>input:-ms-input-placeholder {
+    font-style: italic;
+}
+
+.search_input>input::-ms-input-placeholder {
+    font-style: italic;
+}
+
+.search_result {
+    font-style: italic;
+}
+
+#bookshelf {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.book_card {
+    background: linear-gradient(135deg, mediumaquamarine 0%, mediumaquamarine 25%, aquamarine 100%);
+    display: flex;
+    width: 90%;
+    height: 12.5em;
+    margin: 0 2.5% 2.5em 2.5%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 2.5%;
+}
+
+.book_card>.book_image {
+    width: 37.5%;
+    height: 12.5em;
+    height: 100%;
+    text-align: center;
+    font-size: 0.75em;
+    font-weight: 500;
+    background: rgba(250, 250, 250, 0.75);
+}
+
+.book_card>.book_info {
+    display: flex;
+    flex-direction: column;
+    width: 52.5%;
+    height: 100%;
+    justify-content: space-between;
+
+}
+
+.book_info>article>p {
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.release_year {
+    color: rgba(100, 100, 100, 0.85)
+}
+
+.book_info>.bookshelf_buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 5em;
+}
+
+.book_info>.bookshelf_buttons>button {
+    font-size: 0.75em;
+    font-weight: 600;
+    height: 2.5em;
+    padding: 0.5em;
+    margin-left: 0.75em;
+    background: #e34a27;
+    color: white;
+    border-radius: 3px;
+    border: 0;
+
+}
+
+.book_info>.bookshelf_buttons>button>img {
+    width: 1.5em;
+    height: 1.5em;
+    pointer-events: none;
+}
+
+.move_btn {
+    background: url('../assets/move_icon.png') no-repeat center center fixed;
+}
+
+.delete_btn {
+    background: url('../assets/delete_icon.png') no-repeat center center fixed;
+}
+
+.dialog_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.dialog_active {
+    display: flex;
+}
+
+.move_dialog_box,
+.delete_dialog_box {
+    background-color: #FFFFFF;
+    width: 30%;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 7.5px;
+}
+
+.move_dialog_title,
+.delete_dialog_title {
+    background: linear-gradient(135deg, mediumaquamarine 0%, mediumaquamarine 25%, aquamarine 100%);
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0.75em;
+    border-radius: 7.5px 7.5px 0 0;
+}
+
+.move_dialog_text,
+.delete_dialog_text {
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    margin: 1.5em;
+}
+
+.move_dialog_buttons,
+.delete_dialog_buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.move_dialog_buttons>button,
+.delete_dialog_buttons>button {
+    width: 12.5em;
+    height: 2.25em;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-left: 2.25em;
+    margin-right: 2.25em;
+    border-radius: 0.25em;
+}
+
+.move_dialog_btn_cancel,
+.delete_dialog_btn_cancel {
+    background: #e5e5e5;
+    border: 0;
+}
+
+.move_dialog_btn_cancel:hover,
+.delete_dialog_btn_cancel:hover {
+    background: #a5a5a5;
+    font-weight: 700;
+}
+
+.move_dialog_btn_confirm,
+.delete_dialog_btn_confirm {
+    background: mediumaquamarine;
+    border: 0;
+}
+
+.move_dialog_btn_confirm:hover,
+.delete_dialog_btn_confirm:hover {
+    background: aquamarine;
+    font-weight: 700;
+}

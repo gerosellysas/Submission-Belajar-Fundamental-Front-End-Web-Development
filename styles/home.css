@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: mediumaquamarine;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75em;
+    box-shadow: 0 0.25em 0.25em 0 rgba(0, 0, 0, 0.25);
+}
+
+#logo a {
+    display: flex;
+    text-decoration: none;
+    transition: transform .4s;
+}
+
+#logo img {
+    width: 3em;
+    height: 3em;
+    margin-right: 0.75em;
+    object-fit: fill;
+    object-position: center;
+}
+
+#logo:hover {
+    transform: scale(1.025);
+}
+
+nav {
+    display: flex;
+    width: 30em;
+    text-align: center;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: white;
+    width: 10em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-weight: 700;
+}
+
+body {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    margin-top: 7.5em;
+}
+
+h1 {
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+h2 {
+    color: white;
+    font-size: 1.75em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.home_background {
+    background: url('../assets/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.card {
+    background: linear-gradient(180deg, mediumaquamarine 0%, mediumaquamarine 25%, aquamarine 100%);
+    width: 35%;
+    height: auto;
+    text-align: center;
+    padding: 1%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.25);
+}
+
+form>.input {
+    display: block;
+}
+
+form>.input>label {
+    display: inline-block;
+    width: 15%;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: left;
+    margin: 0 0.5em 0 0;
+}
+
+form>.input>input,
+form>.input>select {
+    width: 70%;
+    height: 2.25em;
+    margin: 1em 0 0 0.5em;
+    text-align: left;
+    border-radius: 5px;
+    border: 0;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+
+form>.input>select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 3em;
+}
+
+form>.select_wrapper {
+    position: relative;
+}
+
+form>.select_wrapper::after {
+    content: "▼";
+    font-size: 0.75em;
+    top: 1.65em;
+    right: 3.75em;
+    pointer-events: none;
+    position: absolute;
+}
+
+form>.input>select>option {
+    font-size: 1.25em;
+}
+
+form>button {
+    background: linear-gradient(180deg, aquamarine 0%, aquamarine 25%, mediumaquamarine 100%);
+    width: 65%;
+    height: 2.75em;
+    font-size: 0.85em;
+    font-weight: 500;
+    margin: 3em 0 1em 22.5%;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+form>button:hover {
+    background: linear-gradient(180deg, mediumaquamarine 0%, mediumaquamarine 25%, aquamarine 100%);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>App Home</title>
+    <link rel="stylesheet" href="styles/search.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="./home.html">
+                <img src="assets/logo.png">
+                <h1>BOOKSHELF APP</h1>
+            </a>
+        </div>
+        <nav>
+            <!-- <a href="./home.html" class="navbar">BERANDA</a> -->
+            <!-- <a href="./bookshelf.html" class="navbar">RAK BUKU</a> -->
+            <div class="search_input">
+                <input id="searchInput" type="text" placeholder="Masukkan judul buku yang anda cari ..." required>
+                <label for="searchInput">
+                    <a href="#search_page" id="search_page">
+                        <button>CARI</button>
+                    </a>
+                </label>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2>Hasil pencarian untuk : <span class="search_result"></span></h2>
+        <section id="bookshelf"></section>
+    </main>
+    <script src="scripts/search.js" type="module"></script>
+</body>
+
+</html>

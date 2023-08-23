@@ -1,0 +1,5 @@
+const navbar = document.querySelector('a');
+
+function hideNavbar() {
+    navbar[1].add
+}

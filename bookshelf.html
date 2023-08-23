@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>App Bookshelf</title>
+    <link rel="stylesheet" href="styles/bookshelf.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="./home.html">
+                <img src="assets/logo.png">
+                <h1>BOOKSHELF APP</h1>
+            </a>
+        </div>
+        <nav>
+            <a href="./home.html">BERANDA</a>
+            <a href="./bookshelf.html">RAK BUKU</a>
+            <!-- <a href="#search_page" id="search_page">CARI</a> -->
+            <a href="./search.html">CARI</a>
+        </nav>
+    </header>
+    <main>
+        <section class="bookshelves">
+            <div id="unfinishedBookshelf">
+                <a href="#unfinishedBookshelf" class="isUnfinished active">BELUM SELESAI DIBACA</a>
+            </div>
+            <div id="finishedBookshelf">
+                <a href="#finishedBookshlef" class="isFinished">SELESAI DIBACA</a>
+            </div>
+        </section>
+        <section id="bookshelf"></section>
+        <div id="delete_dialog" class="dialog_box">
+            <div class="delete_dialog_box">
+                <div class="delete_dialog_title">Hapus Buku</div>
+                <div class="delete_dialog_text">&nbsp;</div>
+                <div class="delete_dialog_buttons">
+                    <button class="delete_dialog_btn_cancel">BATAL</button>
+                    <button class="delete_dialog_btn_confirm">HAPUS</button>
+                </div>
+            </div>
+        </div>
+        <div id="move_dialog" class="dialog_box">
+            <div class="move_dialog_box">
+                <div class="move_dialog_title">Pindah Buku</div>
+                <div class="move_dialog_text">&nbsp;</div>
+                <div class="move_dialog_buttons">
+                    <button class="move_dialog_btn_cancel">BATAL</button>
+                    <button class="move_dialog_btn_confirm">PINDAH</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/bookshelf.js" type="module"></script>
+</body>
+
+</html>

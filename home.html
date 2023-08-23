@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>App Home</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="home_background">
+    <header>
+        <div id="logo">
+            <a href="./home.html">
+                <img src="assets/logo.png">
+                <h1>BOOKSHELF APP</h1>
+            </a>
+        </div>
+        <nav>
+            <a href="./home.html">BERANDA</a>
+            <a href="./bookshelf.html">RAK BUKU</a>
+            <a href="./search.html">CARI</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Masukkan Buku Baru</h2>
+            <form id="inputBook">
+                <div class="input">
+                    <label for="bookTitle">Judul</label>
+                    <input id="bookTitle" type="text" placeholder="Judul Buku" required>
+                </div>
+                <div class="input">
+                    <label for="bookAuthor">Penulis</label>
+                    <input id="bookAuthor" type="text" placeholder="Nama Penulis Buku" required>
+                </div>
+                <div class="input">
+                    <label for="bookYear">Tahun</label>
+                    <input id="bookYear" type="number" placeholder="Tahun Penerbitan Buku" required>
+                </div>
+                <div class="input select_wrapper">
+                    <label for="bookIsFinish">Rak Buku</label>
+                    <select id="bookIsFinish">
+                        <option value="none" selected disabled hidden>Pilih Rak Untuk Menyimpan Buku</option>
+                        <option value="isFinished" class="dropdown_menu">Selesai Dibaca</option>
+                        <option value="isUnfinished" class="dropdown_menu">Belum Selesai Dibaca</option>
+                    </select>
+                </div>
+                <button id="bookSubmit" type="submit">
+                    Belum Ada Buku Yang Dimasukkan Ke Dalam Rak
+                </button>
+            </form>
+        </section>
+    </main>
+    <script src="scripts/home.js" type="module"></script>
+</body>
+
+</html>
